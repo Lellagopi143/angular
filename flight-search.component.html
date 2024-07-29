@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <h2>Search Flights</h2>
+  <form (ngSubmit)="onSearch()">
+    <div class="form-group">
+      <label for="source">Source</label>
+      <input type="text" id="source" [(ngModel)]="source" name="source" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="destination">Destination</label>
+      <input type="text" id="destination" [(ngModel)]="destination" name="destination" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Date of Travel</label>
+      <input type="date" id="date" [(ngModel)]="date" name="date" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="passengers">Number of Passengers</label>
+      <input type="number" id="passengers" [(ngModel)]="passengers" name="passengers" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="class">Class</label>
+      <select id="class" [(ngModel)]="classType" name="class" class="form-control" required>
+        <option>Economy</option>
+        <option>Business</option>
+        <option>First Class</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+

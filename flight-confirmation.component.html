@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <h2>Booking Confirmation</h2>
+  <div *ngIf="flight && customer">
+    <p>Flight: {{ flight.flightName }}</p>
+    <p>From: {{ flight.source }} To: {{ flight.destination }}</p>
+    <p>Date: {{ flight.date }} Time: {{ flight.time }}</p>
+    <p>Class: {{ flight.class }}</p>
+    <p>Price: {{ flight.price }}</p>
+    <p>Customer Name: {{ customer.name }}</p>
+    <p>Customer Email: {{ customer.email }}</p>
+    <button class="btn btn-success" (click)="downloadTicket()">Download Ticket</button>
+  </div>
+</div>
+
+
